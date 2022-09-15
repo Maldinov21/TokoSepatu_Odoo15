@@ -8,7 +8,7 @@
         <field name="arch" type="xml">
             <form string="penjualanreport_wizard_form">
                 <group>
-                    <field name="pelanggan_id"/>
+                    <field name="pelanggan_id" domain="[('pelanggan', '=', True)]"/>
                 </group>
                 <group>
                     <field name="dari_tgl"/>

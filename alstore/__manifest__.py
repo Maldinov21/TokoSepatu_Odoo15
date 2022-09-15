@@ -39,6 +39,10 @@
         'views/penjualan_view.xml',
         'report/report.xml',
         'report/print_faktur_penjualan.xml',
+        'report/print_supplier_pdf.xml',
+        'report/print_sepatu_pdf.xml',
+        'report/print_merek_pdf.xml',
+        'report/print_kasir_pdf.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

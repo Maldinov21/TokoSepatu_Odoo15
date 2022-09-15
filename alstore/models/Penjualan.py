@@ -82,6 +82,12 @@ class Penjualan(models.Model):
                     pass
         return record
 
+    # @api.constrains('id_member')
+    # def check_id_member(self):
+    #     for rec in self:
+    #         if rec.id_member == rec.self:
+    #             raise ValidationError("ID Member {} tidak bisa digunakan, karena sudah ada".format(rec.nama_pembeli.id_member))
+
     _sql_constraints = [
         ('no_nota_unik', 'unique (name)', 'Nomor Nota tidak boleh sama !!!')
     ]

@@ -6,13 +6,19 @@
         <field name="name">List Penjualan</field>
         <field name="model">alstore.penjualan</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree decoration-success="state == 'draft'"
+                  decoration-muted="state == 'cancelled'"
+                  decoration-info="state == 'confirm'">
                 <field name="name"/>
                 <field name="nama_pembeli"/>
                 <field name="id_member"/>
                 <field name="tgl_penjualan"/>
                 <field name="total_bayar"/>
-                <field name="state"/>
+                <field name="state"
+                        decoration-success="state == 'draft'"
+                        decoration-muted="state == 'cancelled'"
+                        decoration-info="state == 'confirm'"
+                        widget="badge"/>
             </tree>
         </field>
     </record>
@@ -27,7 +33,7 @@
                     <button name="action_confirm" type="object" string="Confirm" class="btn btn-primary" states="draft"/>
                     <button name="action_done" type="object" string="Done" class="btn btn-primary" states="confirm"/>
                     <button name="action_cancelled" type="object" string="Cancel" class="btn btn-warning" states="confirm" confirm="Anda Yakin ingin membatalkan pesanan ini"/>
-                    <button name="action_draft" type="object" string="Kembali" class="btn btn-danger" states="cancelled" confirm="Anda Yakin ingin mengedit pesanan ini"/>
+                    <button name="action_draft" type="object" string="Kembali ke Draft" class="btn btn-danger" states="cancelled" confirm="Anda Yakin ingin mengedit pesanan ini"/>
                     <field name="state" widget="statusbar" statusbar_visible="draft,confirm,done"/>
                 </header>
                 <sheet>

@@ -18,7 +18,7 @@ class Merek(models.Model):
         string = 'Nama Merek')
     
     merek_kode = fields.Char(string='Kode Merek')
-    keterangan = fields.Char(string='Keterangan')
+    keterangan = fields.Char(string='Deskripsi')
     rak = fields.Char(string='Rak')
     sepatu_ids = fields.One2many(comodel_name='alstore.sepatu', 
                                  inverse_name='merek_id', 

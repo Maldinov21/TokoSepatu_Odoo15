@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<odoo>
+    
+    <template id="report_kasir_pdf">
+        <t t-call="web.html_container">
+            <t t-call="web.internal_layout">
+            <!-- <t t-call="web.external_layout"> -->
+                <div class="page">
+                    <h1>REPORT DATA KASIR</h1>
+                        <table class = "table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <span>ID Kasir</span>
+                                    </th>
+                                    <th>
+                                        <span>Nama</span>
+                                    </th>
+                                    <th>
+                                        <span>Alamat</span>
+                                    </th>
+                                    <th>
+                                        <span>Tanggal Lahir</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <t t-foreach="docs" t-as="k">
+                                <tr>
+                                    <td>
+                                        <span t-esc="k['id_kasir']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="k['name']"/>
+                                    </td>
+                                    <!-- <t t-foreach="f.merek_id" t-as="fs">
+                                        <td>
+                                            <span t-esc="fs['name']"/>
+                                        </td>
+                                    </t>  -->
+                                    <td>
+                                        <span t-esc="k['alamat']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="k['tgl_lahir']"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                
+                </div>  
+            </t>
+        </t>
+    </template>
+
+</odoo>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<odoo>
+    
+    <template id="report_merek_pdf">
+        <t t-call="web.html_container">
+            <t t-call="web.internal_layout">
+            <!-- <t t-call="web.external_layout"> -->
+                <div class="page">
+                    <h1>REPORT DATA MEREK SEPATU </h1>
+                        <table class = "table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <span>Nama Merek</span>
+                                    </th>
+                                    <th>
+                                        <span>Kode Merek</span>
+                                    </th>
+                                    <th>
+                                        <span>Deskripsi</span>
+                                    </th>
+                                    <th>
+                                        <span>Rak Letak Sepatu</span>
+                                    </th>
+                                    <th>
+                                        <span>Daftar Sepatu</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <t t-foreach="docs" t-as="p">
+                                <tr>
+                                    <td>
+                                        <span t-esc="p['name']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="p['merek_kode']"/>
+                                    </td> 
+                                    <td>
+                                        <span t-esc="p['keterangan']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="p['rak']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="p['daftar']"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                
+                </div>  
+            </t>
+        </t>
+    </template>
+
+</odoo>

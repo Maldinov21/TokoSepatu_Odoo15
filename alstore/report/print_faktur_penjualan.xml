@@ -23,7 +23,7 @@
                         <t t-foreach="d.detailpenjualan_ids" t-as="ds">
                             <div class = "row">
                                 <div class="col-4">Barang         :</div>
-                                <div class="col-4"><span t-field="ds.sepatu_id.name"/></div>
+                                <div class="col-8"><span t-field="ds.sepatu_id.name"/></div>
                             </div>
                         </t>
                         <div class="row">

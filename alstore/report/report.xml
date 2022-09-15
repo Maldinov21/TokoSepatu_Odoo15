@@ -2,6 +2,36 @@
     <!--  EXCEL  -->
 
     <!-- model.name action window -->
+    <record id="report_sepatu_xlsx" model="ir.actions.report">
+        <field name="name">Print Sepatu Excel</field>
+        <field name="model">alstore.sepatu</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">alstore.report_sepatu_xlsx</field>
+        <field name="report_file">alstore.report_sepatu_xlsx</field>
+        <field name="binding_model_id" ref="model_alstore_sepatu"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="report_merek_xlsx" model="ir.actions.report">
+        <field name="name">Print Merek Excel</field>
+        <field name="model">alstore.merek</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">alstore.report_merek_xlsx</field>
+        <field name="report_file">alstore.report_merek_xlsx</field>
+        <field name="binding_model_id" ref="model_alstore_merek"/>
+        <field name="binding_type">report</field>
+    </record> 
+
+    <record id="report_kasir_xlsx" model="ir.actions.report">
+        <field name="name">Kasir Excel</field>
+        <field name="model">alstore.kasir</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">alstore.report_kasir_xlsx</field>
+        <field name="report_file">alstore.report_kasir_xlsx</field>
+        <field name="binding_model_id" ref="model_alstore_kasir"/>
+        <field name="binding_type">report</field>
+    </record> 
+
     <record id="report_supplier_xlsx" model="ir.actions.report">
         <field name="name">Supplier Excel</field>
         <field name="model">alstore.supplier</field>
@@ -23,16 +53,28 @@
         <field name="binding_type">report</field>
     </record>
 
+    <!-- PDF -->
+    
     <!-- model.name action window -->
-    <!-- <record id="report_sepatu_xlsx" model="ir.actions.report">
-        <field name="name">Barang Excel</field>
+    <record id="report_sepatu_pdf" model="ir.actions.report">
+        <field name="name">Print Sepatu PDF</field>
         <field name="model">alstore.sepatu</field>
-        <field name="report_type">xlsx</field>
-        <field name="report_name">alstore.report_sepatu_xlsx</field>
-        <field name="report_file">alstore.report_sepatu_xlsx</field>
-        <field name="binding_model_id" ref="model_alstore_barang"/>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">alstore.report_sepatu_pdf</field>
+        <field name="report_file">alstore.report_sepatu_pdf</field>
+        <field name="binding_model_id" ref="model_alstore_sepatu"/>
         <field name="binding_type">report</field>
-    </record>  -->
+    </record> 
+
+    <record id="report_merek_pdf" model="ir.actions.report">
+        <field name="name">Print Merek PDF</field>
+        <field name="model">alstore.merek</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">alstore.report_merek_pdf</field>
+        <field name="report_file">alstore.report_merek_pdf</field>
+        <field name="binding_model_id" ref="model_alstore_merek"/>
+        <field name="binding_type">report</field>
+    </record> 
 
     <record id="wizard_penjualanreport_pdf" model="ir.actions.report">
         <field name="name">Print Report</field>
@@ -44,7 +86,26 @@
         <field name="binding_type">report</field>
     </record>
 
-    <!-- PDF -->
+    <record id="report_kasir_pdf" model="ir.actions.report">
+        <field name="name">Print Kasir PDF</field>
+        <field name="model">alstore.kasir</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">alstore.report_kasir_pdf</field>
+        <field name="report_file">alstore.report_kasir_pdf</field>
+        <field name="binding_model_id" ref="model_alstore_kasir"/>
+        <field name="binding_type">report</field>
+    </record> 
+
+    <!-- model.name action window -->
+    <record id="report_supplier_pdf" model="ir.actions.report">
+        <field name="name">Print Supplier (PDF)</field>
+        <field name="model">alstore.supplier</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">alstore.report_supplier_pdf</field>
+        <field name="report_file">alstore.report_supplier_pdf</field>
+        <field name="binding_model_id" ref="model_alstore_supplier"/>
+        <field name="binding_type">report</field>
+    </record> 
 
     <!-- model.name action window -->
     <record id="report_faktur_pdf" model="ir.actions.report">
@@ -56,5 +117,4 @@
         <field name="binding_model_id" ref="model_alstore_penjualan"/>
         <field name="binding_type">report</field>
     </record>  
-
 </odoo>

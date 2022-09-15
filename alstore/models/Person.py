@@ -16,12 +16,8 @@ class Kasir(models.Model):
 
     id_kasir = fields.Char(string='ID Kasir')
 
-class CleaningService(models.Model):
-    _name = 'alstore.cleaningservice'
-    _inherit = 'alstore.person'
-    _description = 'New Description'
-
-    id_cln = fields.Char(string='ID Cleaning Service')
-
+    _sql_constraints = [
+        ('id_kasir_unik', 'unique (id_kasir)', 'ID Kasir tidak bisa dipakai, karena sudah digunakan !!!')
+    ]
     
     

@@ -37,10 +37,7 @@
             <xpath expr="//field[@name='function']" position="attributes">
                 <attribute name="invisible">1</attribute>
             </xpath>
-            <xpath expr="//field[@name='vat']" position="attributes">
-                <attribute name="string">NPWP</attribute>
-            </xpath>
-            <xpath expr="//field[@name='pelanggan']" position="after">
+            <xpath expr="//field[@name='vat']" position="after">
                 <field name="id_member"/>
             </xpath>
         </field>
