@@ -1,0 +1,60 @@
+<odoo>
+    <!--  EXCEL  -->
+
+    <!-- model.name action window -->
+    <record id="report_supplier_xlsx" model="ir.actions.report">
+        <field name="name">Supplier Excel</field>
+        <field name="model">alstore.supplier</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">alstore.report_supplier_xlsx</field>
+        <field name="report_file">alstore.report_supplier_xlsx</field>
+        <field name="binding_model_id" ref="model_alstore_supplier"/>
+        <field name="binding_type">report</field>
+    </record>    
+
+    <!-- model.name action window -->
+    <record id="report_penjualan_xlsx" model="ir.actions.report">
+        <field name="name">Penjualan Excel</field>
+        <field name="model">alstore.penjualan</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">alstore.report_penjualan_xlsx</field>
+        <field name="report_file">alstore.report_penjualan_xlsx</field>
+        <field name="binding_model_id" ref="model_alstore_penjualan"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- model.name action window -->
+    <!-- <record id="report_sepatu_xlsx" model="ir.actions.report">
+        <field name="name">Barang Excel</field>
+        <field name="model">alstore.sepatu</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">alstore.report_sepatu_xlsx</field>
+        <field name="report_file">alstore.report_sepatu_xlsx</field>
+        <field name="binding_model_id" ref="model_alstore_barang"/>
+        <field name="binding_type">report</field>
+    </record>  -->
+
+    <record id="wizard_penjualanreport_pdf" model="ir.actions.report">
+        <field name="name">Print Report</field>
+        <field name="model">alstore.penjualanreport</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">alstore.wizard_penjualanreport_pdf_tmp</field>
+        <field name="report_file">alstore.wizard_penjualanreport_pdf_tmp</field>
+        <field name="binding_model_id" ref="model_alstore_penjualanreport"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- PDF -->
+
+    <!-- model.name action window -->
+    <record id="report_faktur_pdf" model="ir.actions.report">
+        <field name="name">Print Faktur</field>
+        <field name="model">alstore.penjualan</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">alstore.report_faktur_pdf</field>
+        <field name="report_file">alstore.report_faktur_pdf</field>
+        <field name="binding_model_id" ref="model_alstore_penjualan"/>
+        <field name="binding_type">report</field>
+    </record>  
+
+</odoo>

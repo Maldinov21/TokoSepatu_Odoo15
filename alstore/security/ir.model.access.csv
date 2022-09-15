@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_alstore_merek,access.alstore.merek,model_alstore_merek,,1,1,1,1
+access_alstore_sepatu,access.alstore.sepatu,model_alstore_sepatu,,1,1,1,1
+access_alstore_person,access.alstore.person,model_alstore_person,,1,1,1,1
+access_alstore_kasir,access.alstore.kasir,model_alstore_kasir,,1,1,1,1
+access_alstore_cleaningservice,access.alstore.cleaningservice,model_alstore_cleaningservice,,1,1,1,1
+access_alstore_supplier,access.alstore.supplier,model_alstore_supplier,,1,1,1,1
+access_alstore_penjualan,access.alstore.penjualan,model_alstore_penjualan,,1,1,1,1
+access_alstore_detailpenjualan,access.alstore.detailpenjualan,model_alstore_detailpenjualan,,1,1,1,1
+access_alstore_inputbarang,access.alstore.inputbarang,model_alstore_inputbarang,,1,1,1,1
+access_alstore_penjualanreport,access.alstore.penjualanreport,model_alstore_penjualanreport,,1,1,1,1

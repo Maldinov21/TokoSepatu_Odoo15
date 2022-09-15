@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <!-- alstore.inputbarang form view -->
+    <record id="input_barang_view_form_wizard" model="ir.ui.view">
+        <field name="name">Form Input Barang</field>
+        <field name="model">alstore.inputbarang</field>
+        <field name="arch" type="xml">
+            <form string="Form Input Barang">
+                <group>
+                    <field name="sepatu_id"/>
+                    <field name="jumlah"/>
+                </group>
+                <footer>
+                    <button name="button_input_barang" type="object" string="Input Barang" class="btn btn-warning"/>
+                    <button string="Cancel" special="cancel" class="btn btn-danger"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- input_barang_action_wizard -->
+    <record id="input_barang_action_wizard" model="ir.actions.act_window">
+        <field name="name">Input Barang</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">alstore.inputbarang</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref = "input_barang_view_form_wizard"/>
+        <field name="target">new</field>
+    </record>   
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="input_barang_menu_action_wizard" 
+              name="Input Barang" 
+              parent="alstore_sepatu_menu_categ" 
+              action="input_barang_action_wizard" 
+              sequence="48"/>
+
+</odoo>

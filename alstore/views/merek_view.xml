@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<odoo>
+    
+  <!-- alstore.merek tree view -->
+  <record id="alstore_merek_view_tree" model="ir.ui.view">
+    <field name="name">List Merek</field>
+    <field name="model">alstore.merek</field>
+    <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="merek_kode"/>
+            <field name="keterangan"/>
+            <field name="rak"/>
+            <field name="jumlah_barang"/>
+            <field name="daftar"/>
+        </tree>
+    </field>
+  </record>
+
+    <!-- alstore.merek form view -->
+    <record id="alstore_merek_view_form" model="ir.ui.view">
+        <field name="name">Form Merek</field>
+        <field name="model">alstore.merek</field>
+        <field name="arch" type="xml">
+            <form string="List Merek">
+                <sheet>
+                    <group name="merek" string="Merek">
+                        <field name="name" required="1"/>
+                        <field name="merek_kode"/>
+                        <field name="keterangan"/>
+                        <field name="jumlah_barang"/>
+                    </group>
+                    <group name="kode_rak" string="Letak Sepatu">
+                        <field name="rak"/>
+                        <field name="sepatu_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- alstore.merek action window -->
+    <record id="alstore_merek_action" model="ir.actions.act_window">
+        <field name="name">List Merek Sepatu</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">alstore.merek</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="alstore_merek_menu_act" 
+              name="Merek" 
+              parent="alstore_sepatu_menu_categ" 
+              action="alstore_merek_action" 
+              sequence="10"/>
+
+</odoo>
